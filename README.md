@@ -4,15 +4,15 @@ Acorns Interview Tasks
 
 This was developed on a Windows 10 machine just using a text editor.
 
-Part 1
+# Part 1
 Required Installs
 - Ruby
     
-Install packages in the gemfile.
-Run 'cucumber' from the command promt in the './InterviewTasks/Part1' folder
-    
-Part 2
+Install packages in the gemfile and then run 'cucumber' from the command promt in the './InterviewTasks/Part1' folder
 
+
+
+# Part 2
 
 
 
