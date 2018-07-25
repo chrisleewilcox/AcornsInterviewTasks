@@ -6,10 +6,10 @@ This was developed on a Windows 10 machine just using a text editor.
 
 Part 1
 Required Installs
-  Ruby
+- Ruby
     
-
-Run 'cucumber' from the 
+Install packages in the gemfile.
+Run 'cucumber' from the command promt in the './InterviewTasks/Part1' folder
     
 Part 2
 
