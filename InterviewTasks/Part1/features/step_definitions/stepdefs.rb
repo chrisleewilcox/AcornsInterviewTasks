@@ -25,7 +25,7 @@ end
 
 Then("my first name {string} will be displayed in the user menu") do |firstname|
   puts find('#userMenu').find('span.name').text
-  if find('#userMenu').find('span.name').text == firstname
+  if find('#userMenu').find('span.name').text != firstname
     raise "Test Step Failed: Cannot find first name #{firstname}"
   end
 end
