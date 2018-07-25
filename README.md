@@ -14,7 +14,7 @@ Install packages in the gemfile and then run 'cucumber' from the command promt i
 # Part 2
 Required Intalls: Ruby
 
-Install packages in the gemfile and then run 'rspec zillowsearch_spec.rb' from the command promt in the './InterviewTasks/Part2' folder.
+Install packages in the gemfile and then run 'rspec zillowsearch_spec.rb' from the command promt in the './InterviewTasks/Part2/spec' folder.
 
 
 
