@@ -18,7 +18,7 @@ Install packages in the gemfile and then run 'cucumber' from the command promt i
 
 Notes:
 
-As of 7/25/2018 at 200pm I was getting 404 error with the webservice doc pages for Property Details API, Valuation API.
+As of 7/25/2018 at 2:00pm I was getting 404 error with the webservice doc pages for Property Details and Valuation API's.
 - https://www.zillow.com/howto/api/HomeValuationAPIOverview.htm
 - https://www.zillow.com/howto/api/PropertyDetailsAPIOverview.htm
 
