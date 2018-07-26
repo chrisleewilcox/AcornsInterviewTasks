@@ -7,7 +7,7 @@ This was developed on a Windows 10 machine just using a text editor.
 # Part 1
 Required Installs: Ruby, Firefox
 
-Copy files from repository and install packages in the gemfile and then run 'cucumber' from the command promt in the './InterviewTasks/Part1' folder.
+Copy files from repository and install packages in the gemfile.  Set environment path to the './InterviewTasks/Part1/resources'.  Then run 'cucumber' from the command promt in the './InterviewTasks/Part1' folder.
 
 
 
