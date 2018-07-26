@@ -10,10 +10,10 @@ conn.params['childtype'] = 'zipcode'
 
 RSpec.describe ZillowSearch do
   describe "searchproperty" do
+    response = conn.get '/webservice/GetRegionChildren.htm'
+    search = ZillowSearch.new
+    rr = search.getregionalrequest(response.body)
     it "returns property information" do
-      response = conn.get '/webservice/GetRegionChildren.htm'
-      search = ZillowSearch.new
-      rr = search.getregionalrequest(response.body)
       expect(response.status).to eq(200)
       expect(rr['state']).to eq(conn.params['state'])
       expect(rr['city']).to eq(conn.params['city'])
