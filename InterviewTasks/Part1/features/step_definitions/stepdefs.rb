@@ -5,6 +5,10 @@ Capybara.configure do |config|
   config.default_driver = :selenium
   config.app_host = "http://www.redfin.com"
 end
+Capybara.page.driver.browser.manage.window.maximize
+
+@email = 'acornsinterviewtask@mailinator.com'
+@password = '42pDNXBc4y'
 
 Given("I navigated to test application home page") do
   visit('/')
