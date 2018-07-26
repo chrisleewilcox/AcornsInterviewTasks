@@ -29,6 +29,7 @@ As of 7/25/2018 at 2:00pm I was getting 404 error with the webservice doc pages 
 
 Was not able to get the information needed for those webservices.  Will utilize another Zillow search
 to automate.
+  
   UPDATE: I ended up automating the GetRegionalChildren which returns a listing of homes based on parameters provided
   - https://www.zillow.com/howto/api/GetRegionChildren.htm
   
