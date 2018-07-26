@@ -7,25 +7,60 @@ Capybara.configure do |config|
 end
 
 Given("I navigated to test application home page") do
-  visit("/")
-  sleep 2
-  find_button('Log In').click
+  visit('/')
 end
 
 When("I Login with valid credentials") do
-  sleep 2
+  find_button('Log In').click
   find_button('Continue with Email').click
-  sleep 2
   fill_in('Email', with: 'acornsinterviewtask@mailinator.com')
   fill_in('Password', with: '42pDNXBc4y')
-  sleep 2
   find_button('Sign In').click
-  sleep 2
+  sleep 3
 end
 
 Then("my first name {string} will be displayed in the user menu") do |firstname|
-  puts find('#userMenu').find('span.name').text
-  if find('#userMenu').find('span.name').text != firstname
-    raise "Test Step Failed: Cannot find first name #{firstname}"
+  expect(page).to have_content(firstname)
+end
+
+When("I search for a property in {string}, with max price {string},  minimum beds is {string}, {string} or more baths") do |city, maxprice, minbeds, minbaths|
+  @city = city
+  @maxprice = maxprice
+  @minbeds = minbeds
+  @minbaths = minbaths
+  visit('/')
+  find_button('Log In').click
+  find_button('Continue with Email').click
+  fill_in('Email', with: 'acornsinterviewtask@mailinator.com')
+  fill_in('Password', with: '42pDNXBc4y')
+  find_button('Sign In').click
+
+  within(:css, "form.SearchBoxForm", :match => :first) do
+    fill_in('search-box-input', with: @city)
+    find(:css, "button").click
+  end
+
+  sleep 3
+  select @maxprice, :from => 'quickMaxPrice'
+  find_button('Filters').click
+  sleep 3
+  select @minbeds, :from => 'minBeds'
+  select @minbaths, :from => 'baths'
+  find_button('Apply Filters').click
+  find_button('Table').click
+  sleep 3
+end
+
+Then("the results returned will match my criteria") do
+  page.all(:css, '.td.col_price').each do |el|
+    expect(el.text.to_i).to be >= @maxprice
+  end
+
+  page.all(:css, '.td.col_beds').each do |el|
+    expect(el.text.to_i).to be >= @minbeds
+  end
+
+  page.all(:css, '.td.col_baths').each do |el|
+    expect(el.text.to_i).to be >= @minbaths
   end
 end
