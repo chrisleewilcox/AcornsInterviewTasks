@@ -20,8 +20,8 @@ Copy files from repository and install packages in the gemfile.  Then run 'rspec
 
 # Notes:
 
-I was having issues with Capybara's 'wait_until' function so I resorted to using sleeps.  Will get back to getting
-'wait_until' working if time permits.
+I was having issues with Capybara's 'wait_until' function so I resorted to using sleeps.  Will get back to using a wait instead of sleep if time permits.
+
 
 As of 7/25/2018 at 2:00pm I was getting 404 error with the webservice doc pages for Property Details and Valuation API's.
 - https://www.zillow.com/howto/api/HomeValuationAPIOverview.htm
