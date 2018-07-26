@@ -52,15 +52,13 @@ When("I search for a property in {string}, with max price {string},  minimum bed
 end
 
 Then("the results returned will match my criteria") do
-  page.all(:css, '.td.col_price').each do |el|
-    expect(el.text.to_i).to be >= @maxprice
+  page.all(:css, 'td.col_price').each do |el|
+    expect(el.text.to_i).to be <= @maxprice.tr('$','').to_i * 1000
   end
-
-  page.all(:css, '.td.col_beds').each do |el|
-    expect(el.text.to_i).to be >= @minbeds
+  page.all(:css, 'td.col_beds').each do |el|
+    expect(el.text.to_i).to be >= @minbeds.to_i
   end
-
-  page.all(:css, '.td.col_baths').each do |el|
-    expect(el.text.to_i).to be >= @minbaths
+  page.all(:css, 'td.col_baths').each do |el|
+    expect(el.text.to_i).to be >= @minbaths.to_i
   end
 end
