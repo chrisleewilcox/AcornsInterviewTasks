@@ -7,14 +7,14 @@ This was developed on a Windows 10 machine just using a text editor.
 # Part 1
 Required Installs: Ruby, Firefox
 
-Copy files from repository and install packages in the gemfile.  Set environment path to the './InterviewTasks/Part1/resources'.  Then run 'cucumber' from the command promt in the './InterviewTasks/Part1' folder.
+Copy files from repository and install packages in the gemfile.  Set environment path to the './InterviewTasks/Part1/resources'.  Then run 'cucumber' from the command prompt in the './InterviewTasks/Part1' folder.
 
 
 
 # Part 2
 Required Intalls: Ruby
 
-Copy files from repository and install packages in the gemfile.  Then run 'rspec zillowsearch_spec.rb' from the command promt in the './InterviewTasks/Part2/spec' folder.
+Copy files from repository and install packages in the gemfile.  Then run 'rspec zillowsearch_spec.rb' from the command prompt in the './InterviewTasks/Part2/spec' folder.
 
 
 
